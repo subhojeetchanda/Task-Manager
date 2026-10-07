@@ -1,0 +1,19 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 1px solid currentColor;
+}
+
+.low {
+  color: var(--color-success);
+}
+.medium {
+  color: var(--color-warning);
+}
+.high {
+  color: var(--color-danger);
+}
