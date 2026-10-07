@@ -3,6 +3,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import { config } from './config/env.js';
 import { errorHandler } from './middleware/errorHandler.js';
+import taskRoutes from './routes/task.routes.js';
 
 const app = express();
 
@@ -22,7 +23,7 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// To be added: task routes
+app.use('/api/tasks', taskRoutes);
 
 app.use(errorHandler);
 

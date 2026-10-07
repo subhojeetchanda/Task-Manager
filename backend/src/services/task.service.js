@@ -173,5 +173,6 @@ export const deleteTask = (id) => {
     throw new AppError(404, 'Task not found');
   }
 
-  tasks.splice(taskIndex, 1);
+  const [deletedTask] = tasks.splice(taskIndex, 1);
+  return deletedTask;
 };
