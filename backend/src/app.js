@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import { config } from './config/env.js';
-import { errorHandler } from './middleware/errorHandler.js';
+import { errorHandler, notFound } from './middleware/errorHandler.js';
 import taskRoutes from './routes/task.routes.js';
 
 const app = express();
@@ -25,6 +25,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/tasks', taskRoutes);
 
+app.use(notFound);
 app.use(errorHandler);
 
 export { app };
