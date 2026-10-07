@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 import Button from '../Button/Button';
+import { useTheme } from '../../hooks/useTheme';
 
-export default function Header({ toggleTheme }) {
+export default function Header() {
+  const { toggleTheme } = useTheme();
+  
   return (
     <header className={styles.header}>
       <div className={styles.container}>
