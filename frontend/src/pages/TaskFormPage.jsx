@@ -36,7 +36,7 @@ export default function TaskFormPage() {
           description: task.description,
           status: task.status,
           priority: task.priority,
-          dueDate: task.dueDate ? task.dueDate.split('T')[0] : '', // simple format
+          dueDate: task.dueDate ? task.dueDate.split('T')[0] : '',
         });
       } catch (err) {
         setLoadError(err.message || 'Failed to load task');
@@ -107,7 +107,6 @@ export default function TaskFormPage() {
       navigate('/');
     } catch (err) {
       if (err.errors?.length > 0) {
-        // Map backend errors
         const backendErrors = {};
         err.errors.forEach(e => {
           backendErrors[e.field] = e.message;
