@@ -1,7 +1,5 @@
 # Task Management System
 
-![Task Manager Dashboard](docs/screenshots/desktop-dashboard.png)
-
 A full-stack, responsive task management application built as a job assignment. It features a clean, mobile-first React frontend with dark mode support, powered by an Express.js backend using an in-memory data store.
 
 ## Tech Stack
